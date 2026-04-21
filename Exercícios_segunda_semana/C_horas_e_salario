@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main () {
+    float horas, valhora, desc, salarioB, salarioL;
+
+    printf("Digite as horas trabalhadas: ");
+    scanf("%f", &horas);
+
+    printf("Valor da hora trabalhada: ");
+    scanf("%f", &valhora);
+
+    salarioB = horas * valhora;     // Salário Bruto
+    desc = salarioB * 0.08;         // Desconto do INSS (8%)
+    salarioL = salarioB - desc;     // Salário Líquido
+
+    // Exibição de resultados em formato de tabela
+    printf("+----------------------------------+\n");
+    printf("|        CÁLCULO DO SALÁRIO        |\n");
+    printf("+----------------------------------+\n");
+    printf("| Horas Trabalhadas | %.2f |\n", horas);
+    printf("| Valor Hora        | %.2f |\n", valhora);
+    printf("| Salário Bruto     | %.2f |\n", salarioB);
+    printf("| Desconto INSS (8%)| %.2f |\n", desc);
+    printf("| Salário Líquido   | %.2f |\n", salarioL);
+    printf("+----------------------------------+\n");
+
+    return 0; // encerra o programa corretamente
+}
