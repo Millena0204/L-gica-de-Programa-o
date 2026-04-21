@@ -1,0 +1,38 @@
+algoritmo "Leitura registro" 
+ 
+var 
+  nome: caractere 
+  reg: inteiro 
+  id: inteiro 
+  iddias: inteiro 
+ 
+inicio 
+ 
+  escreval ("Registro") 
+  leia (reg) 
+  escolha (reg) 
+    caso 1 
+      nome <- "Luiz Silva" 
+      id <- 15 
+ 
+    caso 2 
+      nome <- "Carlos Santos" 
+      id <- 19 
+ 
+    caso 3 
+      nome <- "Ana Oliveira" 
+      id <- 25 
+ 
+    caso 4 
+      nome <- "Thiago Ferreira" 
+      id <- 28 
+ 
+    outrocaso 
+      escreval("Registro não encontrado") 
+ 
+  fimescolha 
+ 
+  iddias <- id * 365 
+  escreval("Aluno: ", nome) 
+  escreval("Idade em dias: ", iddias) 
+fimalgoritmo
