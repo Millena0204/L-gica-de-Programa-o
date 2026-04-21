@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    float litros, valorf, valorA, valorG;
+    char combu;
+
+    printf("Quantos litros de combustivel?: ");
+    scanf("%f", &litros);
+
+    printf("Qual combustivel (A-Álcool, G-Gasolina): ");
+    scanf(" %c", &combu); // espaço antes de %c para ignorar enter
+
+    // Calcula valores sem desconto
+    valorA = litros * 4.90;
+    valorG = litros * 7.30;
+
+    // Aplica desconto
+    if (combu == 'A' || combu == 'a') {
+        if (litros <= 20) {
+            valorf = valorA * 0.97; // 3% de desconto
+        } else {
+            valorf = valorA * 0.95; // 5% de desconto
+        }
+    } else if (combu == 'G' || combu == 'g') {
+        if (litros <= 20) {
+            valorf = valorG * 0.96; // 4% de desconto
+        } else {
+            valorf = valorG * 0.94; // 6% de desconto
+        }
+    } else {
+        printf("Combustivel invalido!\n");
+        valorf = 0;
+    }
+
+    printf("Quantidade de litros: %.2f\n", litros);
+    printf("Valor a ser pago: R$ %.2f\n", valorf);
+
+    return 0;
+}
