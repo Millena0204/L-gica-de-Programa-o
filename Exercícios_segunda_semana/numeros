@@ -1,0 +1,37 @@
+algoritmo "Numeros_PARA" 
+ 
+var 
+  quantV, P: inteiro 
+  quant_pos, quant_neg: inteiro 
+  valorDig: real 
+  soma: real 
+  media, percpo, percneg: real 
+ 
+inicio 
+  escreval("Escreva a quantidade de valores:") 
+  leia(quantV) 
+ 
+  soma <- 0 
+  quant_pos <- 0 
+  quant_neg <- 0 
+ 
+  para P de 1 ate quantV faca 
+    escreval("Digite o ", P, "º valor: ") 
+    leia(valorDig) 
+ 
+    soma <- soma + valorDig 
+    se valorDig > 0 entao 
+      quant_pos <- quant_pos + 1 
+    senao 
+      quant_neg <- quant_neg + 1 
+    fimse 
+  fimpara 
+ 
+  media <- soma / quantV 
+  percpo <- (quant_pos * 100) / quantV 
+  percneg <- (quant_neg * 100) / quantV 
+ 
+  escreval("Média aritmética: ", media) 
+  escreval("Quantidade de positivos: ", quant_pos, " (", percpo, "%)") 
+  escreval("Quantidade de negativos: ", quant_neg, " (", percneg, "%)") 
+fimalgoritmo
