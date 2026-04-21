@@ -1,0 +1,24 @@
+algoritmo "SomaNA" 
+ 
+var 
+   A, N, contInicial: inteiro 
+   somaNA: inteiro 
+ 
+inicio 
+   escreval("Digite A:") 
+   leia(A) 
+   escreval("Digite N :") 
+   leia(N) 
+   enquanto N <= 0 faca 
+      escreval("N deve ser positivo! Digite novamente:") 
+      leia(N) 
+   fimenquanto 
+   somaNA <- 0 
+   contInicial <- 0 
+   enquanto contInicial < N faca 
+      somaNA <- somaNA + (A + contInicial) 
+      contInicial <- contInicial + 1 
+   fimenquanto 
+ 
+   escreval("A somaNA dos ", N, " números a partir de ", A, " é: ", somaNA) 
+fimalgoritmo
