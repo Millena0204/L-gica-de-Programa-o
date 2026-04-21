@@ -1,0 +1,28 @@
+algoritmo "RepresaChuvaSeca" 
+var 
+   represa: inteiro 
+   resposta: caractere 
+   resultado: real 
+inicio 
+   escreva("Digite a quantidade de 
+litros da represa: ") 
+   leia(represa) 
+ 
+   escreva("É um período de 
+chuva? (S/N): ") 
+   leia(resposta) 
+ 
+   se (resposta = "S") ou (resposta 
+= "s") entao 
+      resultado <- represa* 1.34 
+      escreval("Quantidade após 
+aumento de 34%, em litros foi de: 
+", resultado) 
+   senao 
+      resultado <- represa* 0.60 
+      resultado <- resultado * 1000 
+      escreval("Quantidade após 
+redução de 40% foi em mm de: ", 
+resultado) 
+   fimse 
+fimalgoritmo
