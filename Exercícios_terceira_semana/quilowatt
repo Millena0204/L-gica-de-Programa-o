@@ -1,0 +1,30 @@
+#include <stdio.h> 
+ 
+int main() { 
+    float salariomin, quilowatts, valor_kw, valor_total, valor_desc, valor_acresc; 
+ 
+    printf("Digite o valor do salário mínimo: "); 
+    scanf("%f", &salariomin); 
+ 
+    printf("Digite a quantidade de quilowatts consumidos: "); 
+    scanf("%f", &quilowatts); 
+ 
+    // a) valor de cada quilowatt 
+    valor_kw = salariomin / 1000; 
+ 
+    // b) valor total a pagar 
+    valor_total = quilowatts * valor_kw; 
+ 
+    // c) valor com desconto de 8% 
+    valor_desc = valor_total * 0.92; 
+ 
+    // d) valor com acréscimo de 10% 
+    valor_acresc = valor_total * 1.10; 
+ 
+    printf("\nValor de cada quilowatt: R$ %.2f", valor_kw); 
+    printf("\nValor total a pagar: R$ %.2f", valor_total); 
+    printf("\nValor com desconto de 8%% (pagamento antecipado): R$ %.2f", valor_desc); 
+    printf("\nValor com acréscimo de 10%% (pagamento em atraso): R$ %.2f\n", valor_acresc); 
+ 
+    return 0; 
+} 
