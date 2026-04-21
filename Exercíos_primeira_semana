@@ -1,0 +1,30 @@
+algoritmo "reajuste_salarial" 
+ 
+var 
+   SalFunc: real 
+   Reaj: real 
+   novo_salario: real 
+ 
+inicio 
+ 
+   escreval("Digite seu salário: ") 
+   leia(SalFunc) 
+ 
+   se (SalFunc <= 1450) entao 
+      Reaj <- SalFunc * 0.12 
+ 
+   senao 
+      se (SalFunc <= 3240) entao 
+         Reaj <- SalFunc * 0.085 
+      senao 
+         Reaj <- SalFunc * 0.0325 
+      fimse 
+   fimse 
+ 
+   novo_salario <- SalFunc + Reaj 
+ 
+   escreval("Salário anterior: R$ ", SalFunc) 
+   escreval("Valor do reajuste: R$ ", Reaj) 
+   escreval("Novo salário: R$ ", novo_salario) 
+ 
+fimalgoritmo
