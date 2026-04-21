@@ -1,0 +1,23 @@
+#include <stdio.h> 
+ 
+int main() { 
+    int kg;          // peso em quilogramas 
+    float g;         // peso em gramas 
+    float novopeso;  // novo peso em gramas após 
+engordar 15% 
+ 
+    printf("Digite o peso da pessoa em 
+quilogramas: "); 
+    scanf("%d", &kg); 
+ 
+    // a) peso em gramas 
+    g = kg * 1000; 
+    printf("Peso em gramas: %.2f g\n", g); 
+ 
+    // b) novo peso com aumento de 15% 
+    novopeso = kg * 1.15 * 1000; 
+    printf("Novo peso em gramas após engordar 
+15%%: %.2f g\n", novopeso); 
+ 
+    return 0; 
+} 
