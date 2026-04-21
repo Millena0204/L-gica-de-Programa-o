@@ -1,0 +1,35 @@
+algoritmo "Exercicio_31"
+var
+
+c, homem, mulher, idade, maiorIdade, somaIdade: inteiro
+sex: caractere
+
+inicio
+
+Para c <- 1 até 10 faca
+
+  Escreva("Digite o SEXO do aluno [m/h]: ")
+  Leia(sex)
+  Se (maiusc(sex) = "M") entao
+      mulher <- mulher + 1
+  senao
+  Se (maiusc(sex) = "H") entao
+     homem <- homem + 1
+  FimSe
+  FimSe
+  Escreva("Digite a IDADE do aluno: ")
+  Leia(idade)
+  Se (idade > maiorIdade) entao
+      maiorIdade <- idade
+  FimSe
+  somaIdade <- somaIdade + idade
+
+FimPara
+
+Escreval("O número de mulheres é: ", mulher)
+Escreval("O número de homens é: ", homem)
+Escreval("A média de idade da sala é: ", (somaIdade/10))
+Escreval("A maior idade da sala é: ", maiorIdade)
+
+
+fimalgoritmo
